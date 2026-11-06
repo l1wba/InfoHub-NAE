@@ -157,12 +157,14 @@
 
         <article class="setor-card">
           <h3>🕐 Horários de Atendimento</h3>
+          <h4>Período letivo</h4>
           <dl class="setor-info-list">
-            <div><dt>Segunda-feira</dt><dd>12:00 às 22:00</dd></div>
-            <div><dt>Terça-feira</dt><dd>12:00 às 22:00</dd></div>
-            <div><dt>Quarta-feira</dt><dd>12:00 às 22:00</dd></div>
-            <div><dt>Quinta-feira</dt><dd>12:00 às 22:00</dd></div>
+            <div><dt>Segunda a quinta-feira</dt><dd>12:00 às 22:00</dd></div>
             <div><dt>Sexta-feira</dt><dd>08:00 às 22:00</dd></div>
+          </dl>
+          <h4>Fora do período letivo</h4>
+          <dl class="setor-info-list">
+            <div><dt>Segunda a sexta-feira</dt><dd>08:00 às 18:00</dd></div>
           </dl>
         </article>
 
@@ -170,7 +172,7 @@
           <h3>💬 Atendimento e comunicação</h3>
           <p>O atendimento pode ser espontâneo, <strong>sem necessidade de agendamento prévio</strong>. Você pode entrar em contato por:</p>
           <ul>
-            <li>Atendimento presencial e murais da universidade</li>
+            <li>Atendimento presencial <strong>(localização abaixo)</strong></li>
             <li><a href="mailto:nae.carangola@uemg.br">E-mail: nae.carangola@uemg.br</a></li>
             <li><a href="tel:+553237417073">Telefone: (32) 3741-7073</a></li>
             <li><a href="https://www.instagram.com/nae_carangola?rpxt=MXdlN2k2bzdmOWY2cA==" target="_blank" rel="noopener noreferrer">Instagram do NAE</a></li>
@@ -193,25 +195,49 @@
                 </svg>
               </button>
               <aside class="nae-location-preview" id="nae-location-preview" aria-labelledby="nae-location-preview-title" hidden>
-                <div class="nae-location-preview-placeholder" role="img" aria-label="Espaço reservado para a foto do local do NAE">
-                  <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-                    <path d="M8 13h7l3-4h12l3 4h7a3 3 0 0 1 3 3v22H5V16a3 3 0 0 1 3-3Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
-                    <circle cx="24" cy="26" r="8" fill="none" stroke="currentColor" stroke-width="2.5" />
-                  </svg>
-                  <span>Foto do local em breve</span>
+                <div class="nae-location-carousel" aria-label="Entradas do NAE">
+                  <div class="nae-location-carousel-stage" aria-live="polite">
+                    <figure class="nae-location-slide" data-label="Entrada externa" data-reference="Porta em frente à escada do Bloco 2, próximo ao bebedouro.">
+                      <button class="nae-location-image-trigger" type="button" aria-label="Ampliar foto da entrada externa do NAE">
+                        <img src="./images/entrada-externa.webp" alt="Entrada externa do NAE no Bloco 2." />
+                      </button>
+                    </figure>
+                    <figure class="nae-location-slide" data-label="Entrada interna" data-reference="Primeira porta à esquerda do corredor, ao lado da bancada de atendimento." hidden>
+                      <button class="nae-location-image-trigger" type="button" aria-label="Ampliar foto da entrada interna do NAE">
+                        <img src="./images/entrada-interna.webp" alt="Corredor interno do NAE com a placa de identificação do núcleo." />
+                      </button>
+                    </figure>
+                  </div>
+                  <button class="nae-location-carousel-control nae-location-carousel-control--previous" type="button" aria-label="Mostrar entrada anterior">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  </button>
+                  <button class="nae-location-carousel-control nae-location-carousel-control--next" type="button" aria-label="Mostrar próxima entrada">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  </button>
                 </div>
+                <p class="nae-location-expand-hint">Clique na imagem para ampliá-la.</p>
                 <div class="nae-location-preview-content">
-                  <h4 id="nae-location-preview-title">NAE — Bloco 1</h4>
-                  <p>A foto do local será adicionada aqui.</p>
+                  <h4 id="nae-location-preview-title">Entrada externa — Bloco 1</h4>
+                  <p class="nae-location-reference">Porta em frente à escada do Bloco 2, próximo ao bebedouro.</p>
+                  <p class="nae-location-carousel-status" aria-live="polite">1 de 2</p>
                 </div>
               </aside>
             </div>
             <figcaption>Passe o mouse ou toque no pinpoint para ver detalhes da localização.</figcaption>
           </figure>
+          <dialog class="nae-location-lightbox" aria-label="Foto ampliada da entrada do NAE">
+            <button class="nae-location-lightbox-close" type="button" aria-label="Fechar imagem ampliada">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m5 5 14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </button>
+            <img class="nae-location-lightbox-image" alt="" />
+          </dialog>
         </section>
-        <p class="setor-coordination"><strong>Coordenação do NAE:</strong> Dayana Barbosa Furtado (<a href="mailto:danyana.furtado@uemg.br">danyana.furtado@uemg.br</a>).</p>
-        <p class="setor-coordination"><strong>Assistente social:</strong> Marilane da Silva Braga (<a href="mailto:marilani.braga@uemg.br">marilani.braga@uemg.br</a>).</p>
+        <p class="setor-coordination"><strong>Coordenação do NAE:</strong> Dayana Barbosa Furtado (<a href="mailto:dayana.furtado@uemg.br">dayana.furtado@uemg.br</a>).</p>
+        <p class="setor-coordination"><strong>Assistente social:</strong> Marilani da Silva Braga (<a href="mailto:marilani.braga@uemg.br">marilani.braga@uemg.br</a>).</p>
       </div>
+      <p class="setor-disclaimer">Informações atualizadas em 06/11/2026 às 18h30.<br />Horários e orientações podem mudar; confirme as informações com o NAE.</p>
 
       <section class="setor-team" aria-labelledby="setor-team-title">
         <h3 id="setor-team-title">Desenvolvido por</h3>
